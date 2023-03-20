@@ -1,0 +1,105 @@
+body {
+  background-color: #f7f7f7;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pokedex {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pokedex h1 {
+  background-color: #e92929;
+  color: #fff;
+  font-size: 28px;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.pokedex ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.pokedex li {
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.pokedex li:first-child {
+  border-top: none;
+}
+
+.pokedex a {
+  color: #333;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.pokedex a:hover {
+  color: #e92929;
+}
+
+.pokedex input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  margin: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.pokedex .pokemon-details {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+}
+
+.pokedex .pokemon-details h2 {
+  color: #e92929;
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+}
+
+.pokedex .pokemon-details p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.pokedex .pokemon-details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pokedex .pokemon-details li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.pokedex .pokemon-details li:before {
+  content: "- ";
+}

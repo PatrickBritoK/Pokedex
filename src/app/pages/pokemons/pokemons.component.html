@@ -1,0 +1,24 @@
+<body class="pokedex">
+
+
+    <h1>Pokedex</h1>
+
+    <input type="text" [(ngModel)]="searchQuery" (input)="search()" placeholder="Search Pokemon">
+
+    <ul>
+        <li *ngFor="let pokemon of filteredList">
+            <a (click)="selectPokemon(pokemon)">{{ pokemon.name }}</a>
+        </li>
+    </ul>
+
+    <div *ngIf="selectedPokemonDetails">
+        <h2>{{ selectedPokemonDetails.name }}</h2>
+        <p>Height: {{ selectedPokemonDetails.height }}</p>
+        <p>Abilities:</p>
+        <ul>
+            <li *ngFor="let ability of selectedPokemonDetails.abilities">
+                {{ ability.ability.name }}
+            </li>
+        </ul>
+    </div>
+</body>

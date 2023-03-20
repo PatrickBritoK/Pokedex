@@ -1,24 +1,38 @@
+<header>
+
+    <mat-toolbar class="header">
+        <h1>Pokedex</h1>
+    </mat-toolbar>
+</header>
+
 <body class="pokedex">
+    <div class="container">
 
 
-    <h1>Pokedex</h1>
 
-    <input type="text" [(ngModel)]="searchQuery" (input)="search()" placeholder="Search Pokemon">
-
-    <ul>
-        <li *ngFor="let pokemon of filteredList">
-            <a (click)="selectPokemon(pokemon)">{{ pokemon.name }}</a>
-        </li>
-    </ul>
-
-    <div *ngIf="selectedPokemonDetails">
-        <h2>{{ selectedPokemonDetails.name }}</h2>
-        <p>Height: {{ selectedPokemonDetails.height }}</p>
-        <p>Abilities:</p>
-        <ul>
-            <li *ngFor="let ability of selectedPokemonDetails.abilities">
-                {{ ability.ability.name }}
-            </li>
-        </ul>
+        <input type="text" [(ngModel)]="searchQuery" (input)="search()" placeholder="Search Pokemon">
+        <div  class="nomes">
+            <ul>
+                <li *ngFor="let pokemon of filteredList">
+                    <a (click)="selectPokemon(pokemon)">{{ pokemon.name }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="teste2" *ngIf="selectedPokemonDetails">
+            <h2>{{ selectedPokemonDetails.name }}</h2>
+            <p>Altura: {{ selectedPokemonDetails.height }}</p>
+            <p>Habilidades:</p>
+            <ul>
+                <li *ngFor="let ability of selectedPokemonDetails.abilities">
+                    {{ ability.ability.name }}
+                </li>
+            </ul>
+            <p>Tipos</p>
+            <ul>
+                <li *ngFor="let type of selectedPokemonDetails.types">
+                    {{ type.type.name }}
+                </li>
+            </ul>
+        </div>
     </div>
 </body>

@@ -38,11 +38,13 @@ export class PokemonsComponent implements OnInit {
     this.http.get<PokemonDetails>(pokemon.url)
       .subscribe(data => {
         const abilities = data.abilities.map(ability => ({ ability: { name: ability.ability.name } }));
+        const types = data.types.map(type => ({ type: { name: type.type.name } }));
         
         this.selectedPokemonDetails = {
           name: data.name,
           height: data.height,
-          abilities: abilities
+          abilities: abilities,
+          types: types
         };
       });
   }

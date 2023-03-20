@@ -44,7 +44,8 @@ export class PokemonsComponent implements OnInit {
           name: data.name,
           height: data.height,
           abilities: abilities,
-          types: types
+          types: types,
+          sprites: data.sprites,
         };
       });
   }

@@ -8,5 +8,6 @@ export interface PokemonDetails {
   height: number;
   types: Array <{type : { name:string}}>;
   abilities: Array<{ ability: { name: string } }>;
+  sprites: Array<{front_default: string }>;
   
 }
